@@ -1,12 +1,11 @@
-def fun(n):
-    if n<0:
-        print("not possible")
-    while n>0:
-        t=n
-        d=n%10
-        print(d)
-        n=n//10
+import nltk
 
+# Download only the most commonly used modules
+nltk.download('punkt')                     # Tokenizer
+nltk.download('stopwords')                 # Stopword list
+nltk.download('wordnet')                   # WordNet Lemmatizer
+nltk.download('averaged_perceptron_tagger')# Part-of-speech tagger
+nltk.download('maxent_ne_chunker')         # Named Entity Recognition
+nltk.download('words')                     # English word list for NER
 
-n=int(input("enter a number:"))
-fun(n)
+print("All selected NLTK modules downloaded successfully.")
